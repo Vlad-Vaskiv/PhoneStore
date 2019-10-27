@@ -1,0 +1,33 @@
+﻿@model StoreT.ViewModels.RegisterModel
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+
+<link rel="stylesheet" href="~/css/st.css" />
+<environment include="Development">
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="~/js/log.js" asp-append-version="true"></script>
+</environment>
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+<form asp-action="Register" asp-controller="Account" asp-anti-forgery="true">
+    <div id="login-box">
+        <div class="left">
+            <h1>Sign up</h1>          
+            <input type="text" name="Email" placeholder="E-mail" />
+            <input type="password" name="Password" placeholder="Password" />
+            <input type="password" name="ConfirmPassword" placeholder="Retype password" />
+
+            <input type="submit" name="signup_submit" value="Sign me up" />
+        </div>
+
+        <div class="right">
+            <img src="~/images/2.jpg"><br>
+
+        </div>
+    </div>
+</form>
